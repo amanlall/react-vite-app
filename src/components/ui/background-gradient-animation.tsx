@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "../../utils/cn";
 import { useEffect, useRef, useState } from "react";
-import { TextGenerateEffect } from "./text-generate-effect";
+// import { TextGenerateEffect } from "./text-generate-effect";
 
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(255, 155, 255)",
