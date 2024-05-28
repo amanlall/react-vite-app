@@ -1,10 +1,10 @@
 import React from "react";
-import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
-import { PlaceholdersAndVanishInputDemo} from "../customComponents/SearchBoxAI" 
-import { NavbarDemo } from "./NavBar";
-import { ThreeDCardDemo } from "./3d-cardComponent";
-import { TracingBeamDemo } from "./TracingBeam";
-import { Typography } from "antd";
+// import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
+// import { PlaceholdersAndVanishInputDemo} from "../customComponents/SearchBoxAI" 
+// import { NavbarDemo } from "./NavBar";
+// import { ThreeDCardDemo } from "./3d-cardComponent";
+// import { TracingBeamDemo } from "./TracingBeam";
+// import { Typography } from "antd";
 import { BackgroundBeams } from "../ui/background-beams";
 
 export function BackgroundGradientAnimationDemo() {
