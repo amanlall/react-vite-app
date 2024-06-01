@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { BackgroundBeams } from '../ui/background-beams';
 import './Hero.css'

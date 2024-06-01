@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from "../ui/moving-border";
+// import { Button } from "../ui/moving-border";
 import './button.scss';
-import { BackgroundBeams } from '../ui/background-beams';
+// import { BackgroundBeams } from '../ui/background-beams';
 
 const Header =  () => {
   return (
