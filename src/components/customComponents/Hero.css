@@ -1,0 +1,44 @@
+.hero-container {
+  perspective: 7000px;
+  transform-style: preserve-3d;
+}
+
+.greeting{
+  font-size: 6rem; /* set font size */
+  line-height: 1; /* reset line height */
+  margin-left: 6rem; /* set margin */
+  margin-top: 10rem;
+  color: #dbdbdb; /* set text color */
+  font-weight: bold; /* set font weight */
+  text-align: center; /* set text alignment */
+  margin-top: 2rem; /* set margin */
+  z-index: 0;
+  /* text-shadow: 0 0 4px #ff8e48; */
+}
+
+.brandshadow{
+  text-shadow: #ff8e48 0px 1px 12px;
+}
+
+.aboutme{
+  font-size: 2rem; /* set font size */
+  line-height: 1; /* reset line height */
+  margin-left: 6rem; /* set margin */
+  color: #dbdbdb; /* set text color */
+  font-weight: bold; /* set font weight */
+  text-align: center; /* set text alignment */
+  margin-top: 2rem; /* set margin */
+  z-index: 0;
+}
+
+.someinfosection{
+  font-size: 1rem; /* set font size */
+  line-height: 1.5; /* reset line height */
+  margin-left: 6rem; /* set margin */
+  color: #dbdbdb; /* set text color */; /* set font weight */
+  text-align: left; /* set text alignment */
+  margin-top: 2rem; /* set margin */
+  z-index: 0;
+  font-weight: 10;
+  width: 50%;
+}
