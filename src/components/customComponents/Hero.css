@@ -6,14 +6,29 @@
 .greeting{
   font-size: 6rem; /* set font size */
   line-height: 1; /* reset line height */
-  margin-left: 2rem; /* set margin */
-  margin-top: 10rem;
+  margin-left: 2rem; /* set margin */ 
   color: #dbdbdb; /* set text color */
   font-weight: bold; /* set font weight */
   text-align: center; /* set text alignment */
   margin-top: 2rem; /* set margin */
   z-index: 0;
-  /* text-shadow: 0 0 4px #ff8e48; */
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    padding-bottom: 0.2rem;
+  
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 0.5rem;
+  }
+  
 }
 
 .brandshadow{
@@ -23,12 +38,25 @@
 .aboutme{
   font-size: 2rem; /* set font size */
   line-height: 1; /* reset line height */
+  
   margin-left: 2rem; /* set margin */
   color: #dbdbdb; /* set text color */
   font-weight: bold; /* set font weight */
   text-align: center; /* set text alignment */
-  margin-top: 1/5rem; /* set margin */
+  margin-top: 1.5rem; /* set margin */
   z-index: 0;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-top: 0.5rem; 
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.5rem;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 0.3rem;
+  }
 }
 
 .someinfosection{
@@ -41,19 +69,45 @@
   z-index: 0;
   font-weight: 10;
   width: 50%;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    margin-top: 1rem; /* set margin */
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.5rem;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 0.3rem;
+  }
 }
 
 
 .summary{
   font-size: 1rem; /* set font size */
   line-height: 1.5; /* reset line height */
-  margin-left: 0rem; /* set margin */
+  margin-left: 1; /* set margin */
   color: #dbdbdb; /* set text color */; /* set font weight */
   text-align: left; /* set text alignment */
-  margin-top: 2rem; /* set margin */
+  margin-top: 0rem; /* set margin */
   z-index: 0;
   font-weight: 10;
   width: 90%;
+  
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
+  
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 0.5rem;
+  }
 }
 
 .skills-container{

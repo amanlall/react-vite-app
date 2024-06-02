@@ -1,11 +1,11 @@
 import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
-// import { BackgroundBeams } from '../ui/background-beams';
-// import { SparklesCore } from "../ui/Sparkles";
-// import { ThreeDCardDemo } from "./3d-cardComponent";
 import './Hero.css'
 import { Reveal } from "./Reveal";
 import { About } from "./About";
+import { ThreeDCardDemo } from "./3d-cardComponent";
+import { BackgroundBeams } from "../ui/background-beams";
+import { Experience } from "./Experience";
 
 export const Hero = () => {
   const ref = useRef(null);
@@ -20,9 +20,11 @@ console.log(scrollYProgress)
 
   return (
     <div
-      className="hero-container absolute  left-0 w-full h-[200vh] bg-[#0e101a]  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] z-10"
+      className="hero-container absolute bg-[#0e101a]  overflow-hidden  antialiased relative flex flex-col  [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <Reveal children={<div className="greeting py-10">
+          <BackgroundBeams/>
+
+      <Reveal children={<div className="greeting">
         Hey, I'm <span className="brandshadow text-[#f9b17a]">Aman.</span>
       </div>}/>
       <Reveal children={<div className="aboutme">
@@ -33,10 +35,23 @@ console.log(scrollYProgress)
       I also love to discuss ideas (incase you've got an empty canvas layin' around 🎨). Let's connect!
       </div>}/>
 
-      {/* <Reveal children={<About/>}/> */}
-<About/>
+            {/* <Reveal children={<About/>}/> */}
+      <About/>
+      <div className="px-10 text-white text-3xl font-bold">PROJECTS<span className="text-[#f9b17a] ">.</span></div>
+<div className="flex">
+<Reveal children={<ThreeDCardDemo />}/>
+<Reveal children={<ThreeDCardDemo />}/>
 
-      {/* <Reveal children={<div className="someinfosection"><ThreeDCardDemo /></div>}/> */}
+</div>
+<div className="flex">
+<Reveal children={<ThreeDCardDemo />}/>
+<Reveal children={<ThreeDCardDemo />}/>
+
+</div>
+
+<div className="flex">
+<Experience/>
+</div>
 
            
 </div>
