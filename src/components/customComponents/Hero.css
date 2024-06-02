@@ -1,7 +1,4 @@
-.hero-container {
-  perspective: 7000px;
-  transform-style: preserve-3d;
-}
+
 
 .greeting{
   font-size: 6rem; /* set font size */
@@ -38,7 +35,6 @@
 .aboutme{
   font-size: 2rem; /* set font size */
   line-height: 1; /* reset line height */
-  
   margin-left: 2rem; /* set margin */
   color: #dbdbdb; /* set text color */
   font-weight: bold; /* set font weight */
@@ -47,7 +43,7 @@
   z-index: 0;
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-top: 0.5rem; 
+    margin-top: 0.2rem; 
   }
   
   @media (max-width: 480px) {
@@ -71,7 +67,7 @@
   width: 50%;
   @media (max-width: 768px) {
     font-size: 0.8rem;
-    margin-top: 1rem; /* set margin */
+    margin-top: 0.5rem; /* set margin */
   }
   
   @media (max-width: 480px) {
@@ -102,7 +98,7 @@
   }
   
   @media (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
   
   @media (max-width: 320px) {
@@ -111,15 +107,31 @@
 }
 
 .skills-container{
-  color: #dbdbdb;
+  color: #dbdbdb; 
+  font-weight: 100;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   padding-left: 0%;
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  padding-top: 0.5rem;
+
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 0.5rem;
+  }
+
 }
 
-.skill-card{
-  width: 6rem;
+/* .skill-card{
+  width: 5rem;
   height: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -129,16 +141,50 @@
   justify-content: center;
   margin: 0.15rem 0.15rem;
   padding-left: 1;
-}
+} */
 
 .skill-card-content{
-  width: 6rem;
-  height: 2rem;
+  width: 4.5rem;
+  height: 1.8rem;
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background-color: #222;
+  background-color: #676f9d;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0.15rem 0.15rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  @media (max-width: 768px) {
+    width: 2.5rem;
+    height: 0.8rem;
+    margin: 0.09rem 0.1rem;
+  }
+  
+  @media (max-width: 480px) {
+    width: 2.5rem;
+    height: 1.8rem;
+  }
+  
+  @media (max-width: 320px) {
+    width: 4.5rem;
+  height: 1.8rem;
+  }
+
+
+  .skill-card-icon{
+    @media (max-width: 768px) {
+
+      font-size: 0.4rem;
+    }
+    
+    @media (max-width: 480px) {
+
+    }
+    
+    @media (max-width: 320px) {
+
+    }
+    
+
+  }
 }

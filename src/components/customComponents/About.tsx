@@ -1,29 +1,25 @@
 import { Row, Col } from 'antd';
-import { motion } from 'framer-motion';
 import './Hero.css'
-import { BackgroundBeams } from '../ui/background-beams';
 import { Reveal } from './Reveal';
+import { motion } from 'framer-motion';
 export function About() {
   return (
-    <div className="about-section px-8 py-10">
-       <BackgroundBeams/>   
+  
+    <div className="about-section px-8 py-10 container flex-col">
+         
       <Row>
-        <Col span={12}>
-        <div className="text-[#fdfdfd]  sm:text-sm md:text-3xl lg:text-3xl xl:text-3xl font-bold pb-2 mb-4">
-  About
-</div>
-
-
+        <Col xs={24} sm={24} md={16} lg={16} xl={16}>
+        <Reveal children={ <div className="text-[#fdfdfd] sm:text-[1rem] md:text-[1rem] lg:text-[2rem] xl:text-3xl font-bold pb-1">ABOUT<span className='text-[#f9b17a]'>.</span></div>} />
+       
           <div className="summary">
             I am a software engineer with a passion for building scalable and
-            user-friendly software applications. I have a strong background in
-            software development and have worked on various projects both in the
-            academic and industry domains. I am proficient in a wide range of
-            programming languages, frameworks, and technologies, and am
-            constantly learning and expanding my skillset.
+            user-friendly software applications. With 5+ years of expertise, skilled in both backend (4 years) and frontend (2 years)
+            development. Demonstrated expertise in database management, REST API integration, and agile methodology.
+            Proficient in database management, Rest API integration, and agile methodology, I excel in designing efficient
+            data flow structures.
           </div>
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={8} lg={8} xl={8}>
           <Skills />
         </Col>
       </Row>
@@ -38,25 +34,28 @@ function Skills() {
   ]
   return (
     <div className="skills-container align-center">
+<Reveal children={<div className="text-[#fdfdfd] sm:text-[1rem] md:text-[1rem] lg:text-[2rem] xl:text-3xl font-bold pb-1">SKILLS<span className='text-[#f9b17a]'>.</span></div>} />
 
-<div className="text-[#fdfdfd] text-3xl sm:text-xl md:text-xl lg:text-3xl xl:text-5xl font-bold border-[#fdfdfd] pb-2 mb-4">
-  Skills
-</div>
+
       <Row gutter={16}>
         {skills.map((skill, index) => (
           <Col key={index} span={6}>
-            <motion.div
+            <div
               className="skill-card"
-              // whileHover={{ scale: 1.1, transition: { duration: 0.5 } }}
             >
-              
-              <div className="skill-card-content"><Reveal children={<div className="skill-card-icon">{skill}</div>}/></div>
-            </motion.div>
+              <div className="skill-card-content">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.01 }}
+                >
+                  <div className="skill-card-icon">{skill}</div>
+                </motion.div>
+                </div>
+            </div>
           </Col>
         ))}
       </Row>
-      {/* Define the skills array */}
-      {/* Define the grid layout for the skills */}
     </div>
   );
 }

@@ -1,13 +1,14 @@
 
+import { Reveal } from "./Reveal"
+import './ExperienceCard.css'
+
 export function Experience () {   
     return (
         <div>
-        <div className="px-10 mb-10 text-white text-3xl font-bold">EXPERIENCE<span className="text-[#f9b17a] ">.</span></div>
-        <div className="ml-10">
-
-        <OneEx/>
-
-        </div>
+            <Reveal children={<div className="px-10 mb-10 text-white text-3xl font-bold">EXPERIENCE<span className="text-[#f9b17a] ">.</span></div>}/>
+            <div className="ml-10">
+                <OneEx/>
+            </div>
         </div>
         
     )
@@ -22,7 +23,24 @@ function OneEx ()  {
         position: "Senior Analyst",
         duration: "Feb 2022 - Present",
         location:"Hyderabad, India",
-        Work: "Worked on various projects including a web app, a CRM, and a web scraper. I have experience in a variety of technologies and frameworks.",
+        Work: "• Workforce Scheduling System Development: Collaborated as a crucial team member in developing an \
+        innovative, web-based workforce scheduling application, significantly contributing to the initial design and \
+        functionality. \
+        • Co-developed a sophisticated calendar solution, comparable to Microsoft Outlook, enabling efficient meeting\
+        scheduling with integrated email notifications, thereby enhancing user experience and operational workflow.\
+        • Key contributor in the design and implementation of advanced quick-search algorithms for optimal resource\
+        allocation, considering skill sets, availability, and time zone compatibility.\
+        • Developed Auto-scheduling in collaboration with ServiceNow, enabling the automated scheduling of multiple\
+        resources based on skills and availability, markedly improving project management efficiency and reducing\
+        time of staffing by 30%\
+        • Workforce Allocation Tool : Led the transition of a scheduling system from team-level to firm-wide use,\
+        emphasizing adaptability and scalability. Implemented the system for 5+ teams, resulting in 60% cost savings\
+        compared to a competitor's product (monday.com).\
+        • Developed user-centric features, such as custom form creation for client-specific needs and flexible template\
+        selection during the second year, effectively streamlining deployment processes and boosting client\
+        autonomy and satisfaction.\
+        • Received consecutive annual Spot Awards in recognition of outstanding performance and contributions to the\
+        organization.",
        },
        {
         company: "Wipro-HSBC Bank",
@@ -31,32 +49,60 @@ function OneEx ()  {
         position: "Senior Analyst",
         duration: "Feb 2022 - Present",
         location:"Bangalore, India",
-        Work: "Worked on various projects including a web app, a CRM, and a web scraper. I have experience in a variety of technologies and frameworks.",
-       } 
+        Work: "Worked in Anti Money Laundering team: detecting abnormal transactions.\
+        • Cleared, Secure code Warrior White, Yellow, Orange Belt in Django Vulnerabilities",
+       } ,
+       {
+        company: "Wipro-Holmes",
+        role: "Backend Developer",
+        FTE:"Full-Time",
+        position: "Senior Analyst",
+        duration: "Feb 2022 - Present",
+        location:"Bangalore, India",
+        Work: "Revised, modularized and updated old code bases to modern development standards, thereby improving\
+        functionality. Developed and updated REST API based python bot to communicate with other bots and\
+        validate, process, update, upload files to Redis database Created Tables and modified data in the table using\
+        PostgreSQL",
+       } ,
+
+       {
+        company: "Capital One (US), Wipro ",
+        role: "Project Engineer",
+        FTE:"Full-Time",
+        position: "Senior Analyst",
+        duration: "Feb 2022 - Present",
+        location:"Bangalore, India",
+        Work: "ETL Developer, Pipeline Migration Created a Data Mart model based on the lineage of Inbound & Outbound files\
+        using Ab Initio graphs, Snowflake tables which was then loaded into RDS.\
+        • Automated the Data extraction process using Python & Shell Scripting. Replacing the Teradata DB with\
+        Snowflake DB and Migration of ETL projects from legacy to cloud-based servers. Managed onshore\
+        (Bangalore) & offshore (US) team for Data-Mover Program."
+       }
     ]
     return (    
 <>
 
 {workExData.map((data, index) => (
-    <div className="mb-10" key={index}>
-        <div className="flex justify-between">
-            <div className="flex">
-            <h1 className="text-[#f9b17a] font-bold">{data.company} </h1>
-            <h1 className="text-white ml-2 ">{data.role} | </h1>
-            <h1 className="text-white ml-2">{data.location} | </h1>
-            <h1 className="text-white  ml-2">{data.FTE}</h1>
-            </div>
-        <h1 className="text-white">{data.duration}</h1>
-        </div>       
-        <h1 className="text-white">{data.position}</h1>
-        <p className="text-white">{data.Work}</p>
+
+<div className="card" key={index}>
+  <div className="flex justify-between">
+    <div className="flex">
+        <Reveal children={ <h1 className="text-[#f9b17a] font-bold">{data.company} |&nbsp;</h1>} />
+
+      <Reveal children={ <h1 className="text-white ">&nbsp;{data.role} |</h1>}/>
+      <Reveal children={<h1 className="text-white ">&nbsp;{data.location} |</h1> }/>
+      <Reveal children={<h1 className="text-white">&nbsp;{data.FTE}</h1> }/>
     </div>
+    <h1 className="text-white">{data.duration}</h1>
+  </div>
+  <h1 className="text-white">{data.position}</h1>
+  <p className="text-white">{data.Work}</p>
+</div>
+
 ))}
 
 </>
 
-
-
-    )
+)
 }
 
