@@ -1,11 +1,12 @@
 import { Typography, Row, Col } from 'antd';
 import { motion } from 'framer-motion';
-const { Title, Text } = Typography;
+const { Title } = Typography;
 import './Hero.css'
+import { BackgroundBeams } from '../ui/background-beams';
 export function About() {
   return (
     <div className="about-section px-8 py-10">
-
+          <BackgroundBeams/>
       <Row>
         <Col span={12}>
           <Title style={{ color: '#fdfdfd' , fontWeight:"10px"}}>About</Title>
@@ -33,6 +34,7 @@ function Skills() {
   ]
   return (
     <div className="skills-container align-center">
+
       <Title style={{ color: '#fdfdfd' , fontWeight:"10px"}}>Skills</Title>
       <Row gutter={16}>
         {skills.map((skill, index) => (

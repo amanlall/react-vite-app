@@ -1,8 +1,8 @@
 import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { BackgroundBeams } from '../ui/background-beams';
-import { SparklesCore } from "../ui/Sparkles";
-import { ThreeDCardDemo } from "./3d-cardComponent";
+// import { BackgroundBeams } from '../ui/background-beams';
+// import { SparklesCore } from "../ui/Sparkles";
+// import { ThreeDCardDemo } from "./3d-cardComponent";
 import './Hero.css'
 import { Reveal } from "./Reveal";
 import { About } from "./About";
@@ -22,10 +22,6 @@ console.log(scrollYProgress)
     <div
       className="hero-container absolute  left-0 w-full h-[200vh] bg-[#0e101a]  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] z-10"
     >
-      
-      <BackgroundBeams/>
-
-
       <Reveal children={<div className="greeting py-10">
         Hey, I'm <span className="brandshadow text-[#f9b17a]">Aman.</span>
       </div>}/>

@@ -37,12 +37,12 @@ export const Reveal = ({children, width ="fit-content"}:Props)  => {
             }}
             initial="hidden"
             animate={slideControls}
-            transition={{duration: 0.5, ease: "easeIn"}}
+            transition={{duration: 0.5, ease: "easeInOut"}}
             style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
-                width: "100%",
+                width: "70%",
                 height: "100%",
                 background: "#f9b17a",
                 zIndex:70

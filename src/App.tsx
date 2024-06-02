@@ -19,7 +19,7 @@
 // import SkillCard from './components/customComponents/SkillCard'
 import Header from "./components/customComponents/Header"
 import {Hero} from "./components/customComponents/Hero" 
-import { BackgroundBeams } from "./components/ui/background-beams"
+// import { BackgroundBeams } from "./components/ui/background-beams"
 
 
 
