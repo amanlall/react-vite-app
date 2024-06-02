@@ -1,4 +1,4 @@
-import { Typography, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 import { motion } from 'framer-motion';
 import './Hero.css'
 import { BackgroundBeams } from '../ui/background-beams';
