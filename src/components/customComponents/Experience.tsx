@@ -5,7 +5,7 @@ import './ExperienceCard.css'
 export function Experience () {   
     return (
         <div>
-            <Reveal children={<div className="px-10 mb-10 text-white text-3xl font-bold">EXPERIENCE<span className="text-[#f9b17a] ">.</span></div>}/>
+            <Reveal children={<div className="px-10 mb-10 text-white text-3xl font-bold">EXPERIENCE<span className="text-curtainColor ">.</span></div>}/>
             <div className="ml-10">
                 <OneEx/>
             </div>
@@ -87,7 +87,7 @@ function OneEx ()  {
 <div className="card" key={index}>
   <div className="flex justify-between">
     <div className="flex">
-        <Reveal children={ <h1 className="text-[#f9b17a] font-bold">{data.company} |&nbsp;</h1>} />
+        <Reveal children={ <h1 className="text-curtainColor font-bold">{data.company} |&nbsp;</h1>} />
 
       <Reveal children={ <h1 className="text-white ">&nbsp;{data.role} |</h1>}/>
       <Reveal children={<h1 className="text-white ">&nbsp;{data.location} |</h1> }/>
