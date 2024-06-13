@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^2.0.3",
     "@tsparticles/engine": "^3.4.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.4.0",
     "antd": "^5.17.3",
+    "axios": "^1.7.2",
     "cal-sans": "^1.0.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
@@ -22,6 +24,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reactstrap": "^9.2.2",
+    "simplex-noise": "^4.0.1",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {

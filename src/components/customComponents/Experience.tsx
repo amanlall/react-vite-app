@@ -1,8 +1,10 @@
 
 import { Reveal } from "./Reveal"
 import './ExperienceCard.css'
-
+import { Typography } from "antd"
+import { useState } from "react";
 export function Experience () {   
+
     return (
         <div>
             <Reveal children={<div className="px-10 mb-10 text-white text-3xl font-bold">EXPERIENCE<span className="text-curtainColor ">.</span></div>}/>
@@ -15,6 +17,10 @@ export function Experience () {
 }
 
 function OneEx ()  {
+
+
+  const [rows, setRows] = useState(2);
+  const [expanded, setExpanded] = useState(false);
     const workExData = [
        {
         company: "Deloitte",
@@ -89,14 +95,27 @@ function OneEx ()  {
     <div className="flex">
         <Reveal children={ <h1 className="text-curtainColor font-bold">{data.company} |&nbsp;</h1>} />
 
-      <Reveal children={ <h1 className="text-white ">&nbsp;{data.role} |</h1>}/>
-      <Reveal children={<h1 className="text-white ">&nbsp;{data.location} |</h1> }/>
-      <Reveal children={<h1 className="text-white">&nbsp;{data.FTE}</h1> }/>
+      <Reveal children={ <h1 className="text-white font-sans font-bold">&nbsp;{data.role} |</h1>}/>
+      <Reveal children={<h1 className="text-white font-sans font-bold ">&nbsp;{data.location} |</h1> }/>
+      <Reveal children={<h1 className="text-white font-sans font-bold">&nbsp;{data.FTE}</h1> }/>
     </div>
-    <h1 className="text-white">{data.duration}</h1>
+    <h1 className="text-white font-sans font-bold">{data.duration}</h1>
   </div>
-  <h1 className="text-white">{data.position}</h1>
-  <p className="text-white">{data.Work}</p>
+  <h1 className="text-white font-sans font-bold">{data.position}</h1>
+  {/* <p className="text-white">{data.Work}</p> */}
+
+  <Typography.Paragraph
+        ellipsis={{
+          rows,
+          expandable: 'collapsible',
+          expanded,
+          onExpand: (_, info) => setExpanded(info.expanded),
+        }}
+        style={{ color: 'white' }}
+      >
+      {data.Work}
+      </Typography.Paragraph>
+
 </div>
 
 ))}

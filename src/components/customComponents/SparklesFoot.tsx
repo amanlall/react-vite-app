@@ -7,7 +7,7 @@ export function SparklesPreview() {
     <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
       <div className="greeting ">
-        Hey, I'm <span className="brandshadow text-curtainColor">Aman.</span>
+        Chat with <span className="brandshadow text-curtainColor">Me.</span>
       </div>
       </h1>
       <div className="w-[40rem] h-40 relative">

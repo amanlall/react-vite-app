@@ -1,5 +1,8 @@
 
 
+.background {
+  background-color: #000000;
+}
 .greeting{
   font-size: 6rem; /* set font size */
   line-height: 1; /* reset line height */

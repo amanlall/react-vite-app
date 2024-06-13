@@ -30,7 +30,7 @@ export const Reveal = ({children, width ="fit-content"}:Props)  => {
             transition={{duration: 0.5, delay:0.25, ease: "easeInOut"}}
             >{children}</motion.div>
 
-<motion.div
+        <motion.div
             variants={{
                 hidden: {left:0},
                 visible: {left:"100%"},
@@ -44,7 +44,7 @@ export const Reveal = ({children, width ="fit-content"}:Props)  => {
                 left: 0,
                 width: "70%",
                 height: "100%",
-                background: "#f9b17a",
+                background: "#676f9d",
                 zIndex:70
             }}
             ></motion.div>

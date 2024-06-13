@@ -9,6 +9,11 @@
 $bg: #f3f8fa;
 $white: #fff;
 $black: #f9b17a;
+$green: #38bdf8;
+$green: #818cf8;
+$green: #c084fc;
+$green: #e879f9;
+$green: #22d3ee;
 
 @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
   transition: $property $duration $ease;

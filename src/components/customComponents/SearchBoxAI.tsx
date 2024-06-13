@@ -1,10 +1,16 @@
 "use client";
 
+import { motion } from "framer-motion";
 // import { cn } from "../../utils/cn";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { Divider } from "antd";
+// import { TextGenerateEffect } from "../ui/text-generate-effect";
+// import ChatBox  from "./ChatBox";
+// import { Divider } from "antd";
+// import TypingEffect from "./GptTyping";
+import { useState } from "react";
 export function PlaceholdersAndVanishInputDemo() {
+  const [llmanswer,setLlmAnswer] = useState("A");
+  console.log(llmanswer)
   const placeholders = [
     "What's your total experience?",
     "Which is your current company?",
@@ -17,37 +23,39 @@ export function PlaceholdersAndVanishInputDemo() {
   };
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLlmAnswer("this is the answer to your question, this is the answer to your question, this is the answer to your question, this is the answer to your question, this is the answer to your question, this is the answer to your question")
     console.log("submitted");
   };
 
   return (
 
-    <div className="h-full w-full flex justify-center items-center px-4">
-      {/* <div className="w-3/6 flex flex-col justify-center text-xs items-center h-full"> */}
-      {/* relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold */}
-      <div className="w-3/6 flex flex-coltext-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold ">
-        <TextGenerateEffect
-          words="Hi, I'm Aman, With 5.5 years of expertise, skilled in both backend (4 years) and frontend (2 years)
-          development. Demonstrated expertise in database management, REST API integration, and agile methodology.
-          Proficient in database management, Rest API integration, and agile methodology, I excel in designing efficient
-          data flow structures."
-          className="text-white"
-        />
-      </div>
-      <Divider dashed type="vertical"/>
-      <div className="w-2/5 flex flex-col justify-center items-center h-full">
-        <h2 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-          Ask Me Anything
-        </h2>
-        <div className="w-full relative max-w-xl mx-auto py-8">
-          <PlaceholdersAndVanishInput
-            placeholders={placeholders}
-            onChange={handleChange}
-            onSubmit={onSubmit}
-          />
-  <canvas className="absolute pointer-events-none text-base transform scale-50 top-[25%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20 opacity-0" width="800" height="800"></canvas>
-  </div></div>
-    </div>
+                <div className=" top-150 mt-20 w-full flex flex-col justify-center items-center px-4 ">
+                  <motion.div className="w-2/5 flex flex-col justify-center items-center h-full"
+                  initial={{ y: -590 , opacity: 0, width: 10}}
+                  animate={{ y: -150 , opacity: 100, width: 50 }}
+                  transition={{ delay: 4, duration: 1 ,  ease: "easeInOut" }}>
+
+                      <motion.div
+                      className="fixed mb-10 w-[100vh] h-[80vh] flex flex-col justify-center items-center h-full overflow-auto"
+                      initial={{ y: -590 , opacity: 0}}
+                      animate={{ y: -150 , opacity: 100,}}
+                      transition={{ delay: 4, duration: 1 ,  ease: "easeInOut" }}
+                      >
+                        {/* <div className="bg-gradient-to-b from-[#00000]/[0.5] to-transparent md:w-3/4 md:h-3/4 shadow-2xl rounded-lg p-4 border-2 border-white">
+                        <TypingEffect text={llmanswer} />
+                        </div> */}
+                      </motion.div>
+
+                  <div className="w-[600%] mt-20">
+                    <PlaceholdersAndVanishInput
+                      placeholders={placeholders} 
+                      onChange={handleChange}
+                      onSubmit={onSubmit}
+                    />
+                      <canvas className="absolute pointer-events-none text-base transform scale-50 top-[25%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20 opacity-0" width="800" height="800"></canvas>
+                  </div>
+                  </motion.div>
+                </div>
   
   );
 }

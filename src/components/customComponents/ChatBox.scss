@@ -1,0 +1,25 @@
+.chatbox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .chat-question {
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .chat-answer {
+    background-color: #d1ffd6;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .chat-typing {
+    font-style: italic;
+  }
+  
