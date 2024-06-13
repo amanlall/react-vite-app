@@ -20,6 +20,7 @@ function OneEx ()  {
 
 
   const [rows, setRows] = useState(2);
+  console.log(setRows)
   const [expanded, setExpanded] = useState(false);
     const workExData = [
        {

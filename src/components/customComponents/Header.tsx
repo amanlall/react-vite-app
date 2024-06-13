@@ -1,9 +1,9 @@
 import React from 'react';
 // import { Button } from "../ui/moving-border";
 import './button.scss';
-import { BackgroundBeams } from '../ui/background-beams';
-import { Button, Modal } from 'antd';
-import { SparklesCore } from '../ui/Sparkles';
+// import { BackgroundBeams } from '../ui/background-beams';
+// import { Button, Modal } from 'antd';
+// import { SparklesCore } from '../ui/Sparkles';
 
 const Header =  ( { setCurrentTab } :any)  => {
 

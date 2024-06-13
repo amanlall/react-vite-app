@@ -2,9 +2,9 @@ import './Hero.css'
 import { Reveal } from "./Reveal";
 import { About } from "./About";
 import { ThreeDCardDemo } from "./3d-cardComponent";
-import { BackgroundBeams } from "../ui/background-beams";
+// import { BackgroundBeams } from "../ui/background-beams";
 import { Experience } from "./Experience";
-import { ChatInterface } from "./ChatWithMe";
+// import { ChatInterface } from "./ChatWithMe";
 
 export const Hero = () => { 
    return (
