@@ -25,6 +25,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ questions, answers }) => {
         }));
 
         setChatHistory((prev) => {
+          console.log(prev)
           const updatedChatHistory = [...newChats];
           localStorage.setItem(
             'chatHistory',

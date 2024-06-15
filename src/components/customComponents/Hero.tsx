@@ -1,10 +1,7 @@
 import './Hero.css'
-
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { Info } from './Info';
 import { Reveal } from './Reveal';
 import { About } from './About';
-import { ThreeDCardDemo } from './3d-cardComponent';
 import { Experience } from './Experience';
 
 
