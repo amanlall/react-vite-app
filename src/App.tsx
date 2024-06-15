@@ -11,7 +11,8 @@ function App() {
   return (
     <>
       <Header currentTab={currentTab} setCurrentTab={setCurrentTab} />
-      {currentTab === true ? <Hero /> : <AiMan />}
+      {/* {currentTab === true ? <Hero /> : <AiMan />} */}
+      <AiMan />
     </>
   );
 }
