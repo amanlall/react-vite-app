@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Header from './components/customComponents/Header';
-import { Hero } from './components/customComponents/Hero';
+// import { Hero } from './components/customComponents/Hero';
 import { AiMan } from './components/customComponents/AiMan';
 
 import './App.css';
