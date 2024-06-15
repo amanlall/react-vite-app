@@ -81,14 +81,17 @@ const ChatBox: React.FC<ChatBoxProps> = ({ questions, answers }) => {
               className="chat-answer text-xs sm:text-base sm:text-center md:text-sm md:text-center lg:sm lg:text-center"
               style={{ wordBreak: 'break-word', padding: '10px' }}
             >
-              <Avatar src="robocop2.jpg" />{' '}
-              <div className="px-2">
+               <Space>
+              <Avatar src="https://static.vecteezy.com/system/resources/previews/007/839/759/original/cute-robot-cartoon-icon-illustration-science-technology-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg" />{' '}
+             
                 <ChatGPTTypewriterEffect
                   delay={70}
                   text={chat.answer}
                   hideWhenFinished
                 />
-              </div>
+                
+           
+              </Space>
             </div>
           )}
         </div>
@@ -96,7 +99,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ questions, answers }) => {
       {typing && (
         <div className="chat-typing">
           {' '}
-          <Avatar src="https://i.pinimg.com/originals/e1/f0/11/e1f0116a599e07888c2bb10abe23a258.jpg" />{' '}
+          <Avatar src="https://static.vecteezy.com/system/resources/previews/007/839/759/original/cute-robot-cartoon-icon-illustration-science-technology-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg" />{' '}
           Thinking...
         </div>
       )}

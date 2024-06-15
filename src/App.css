@@ -63,7 +63,6 @@
   }
   .animation_layer.parallax {
     position: fixed;
-    
   }
   
   #artback {
@@ -73,6 +72,7 @@
     background-position: center;
     background-attachment: fixed; }
   
+
   #mountain {
     background-image: url(/mountains.png);
   }
@@ -103,4 +103,8 @@
   
   #manonmountain {
     background-image: url(/man_on_mountain.png);
+  }
+
+  #footer {
+    background-color: #98371b;
   }

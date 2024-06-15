@@ -1,13 +1,14 @@
 .card {
-    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    background: rgba(255, 0, 0, 0.1); /* Transparent background */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Border on all sides */
     padding: 20px; /* Padding for better spacing */
     border-radius: 10px; /* Rounded corners */
     margin-bottom: 20px; /* Space between cards */
-    margin-right: 5%;
+    margin-right: 10%;
+    justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
-    transform: translateY(-5px); /* Slight lift on hover */
+    transform: translateY(-15px); /* Slight lift on hover */
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
   }
   
@@ -24,6 +25,7 @@
   @media (max-width: 600px) {
     .card {
       padding: 10px; /* Smaller padding on mobile */
+      margin-left: 10;
     }
   
     .card .flex {
@@ -31,7 +33,8 @@
     }
   
     .card .flex h1 {
-      margin-left: 0; /* Reset left margin on mobile */
+      margin-left: 10; /* Reset left margin on mobile */
+      margin-right: 10;
     }
   }
   

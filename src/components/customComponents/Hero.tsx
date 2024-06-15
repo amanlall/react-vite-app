@@ -9,7 +9,7 @@ export const Hero = () => {
     <>
       <div className="App">
         <Parallax
-          pages={3}
+          pages={2}
           style={{ top: '0', left: '0' }}
           className="animation"
         >
@@ -24,33 +24,33 @@ export const Hero = () => {
             <div className="animation_layer parallax" id="jungle1"></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0} speed={0.35}>
+          <ParallaxLayer offset={0} speed={-0.35}>
             <div className="animation_layer parallax" id="jungle2"></div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.5}>
+          <ParallaxLayer offset={1} speed={0.5}>
             <div className="animation_layer parallax" id="jungle3"></div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.45}>
+          <ParallaxLayer offset={1} speed={0.45}>
             <div className="animation_layer parallax" id="jungle4"></div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.8}>
-            <div className="animation_layer parallax" id=""></div>
+          <ParallaxLayer offset={1} speed={0.8}>
+            <div className="animation_layer parallax" id="footer"></div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.5}>
+          {/* <ParallaxLayer offset={1} speed={0.5}>
             <div className="animation_layer parallax" id="jungle1"></div>
-          </ParallaxLayer>
+          </ParallaxLayer> */}
 
-          <ParallaxLayer offset={1} speed={0.45}>
+          {/* <ParallaxLayer offset={1} speed={0.45}>
             <div className="animation_layer parallax" id="jungle2"></div>
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.5}>
             <div className="animation_layer parallax" id="manonmountain"></div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.45}>
+          </ParallaxLayer> */}
+          {/* <ParallaxLayer offset={1} speed={0.45}>
             <div className="animation_layer parallax" id="artback"></div>
-          </ParallaxLayer>
+          </ParallaxLayer> */}
           <div>
-            <div className="bg-[#0e101a]">
+            <div className="bg-[#98371b]">
               <Reveal
                 children={
                   <div className="greeting">
@@ -62,7 +62,7 @@ export const Hero = () => {
               />
               <Reveal
                 children={
-                  <div className="aboutme font-sans font-bold">
+                  <div className="aboutme text-[#848484] font-sans font-bold">
                     I'm a{' '}
                     <span className="text-curtainColor">
                       Full Stack Developer

@@ -54,7 +54,7 @@ export function PlaceholdersAndVanishInputDemo() {
           <ChatBox questions={questions} answers={answers} />
         </motion.div>
 
-        <div className="w-[600%] mt-20">
+        <div className="w-[750%] top-20 fixed z-0">
           <PlaceholdersAndVanishInput
             placeholders={placeholders}
             onChange={handleChange}

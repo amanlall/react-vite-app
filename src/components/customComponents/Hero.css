@@ -68,6 +68,10 @@
   z-index: 0;
   font-weight: 10;
   width: 50%;
+  border-radius: 30px; /* Adding rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.759);
+  background: #000000ca;
+  padding: 18px;
   @media (max-width: 768px) {
     font-size: 1rem;
     margin-top: 0.5rem; /* set margin */
@@ -87,13 +91,16 @@
   font-size: 1rem; /* set font size */
   line-height: 1.5; /* reset line height */
   margin-left: 1; /* set margin */
-  color: #dbdbdb; /* set text color */; /* set font weight */
+  color: #fbfbfb; /* set text color */; /* set font weight */
   text-align: left; /* set text alignment */
   margin-top: 0rem; /* set margin */
   z-index: 0;
   font-weight: 10;
   width: 90%;
-  
+  border-radius: 30px; /* Adding rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.759);
+  background: #000000ca;
+  padding: 18px;
   @media (max-width: 768px) {
     font-size: 0.7rem;
     padding-bottom: 0.2rem;
@@ -110,7 +117,7 @@
 }
 
 .skills-container{
-  color: #dbdbdb; 
+  color: #000000; 
   font-weight: 100;
   display: flex;
   flex-wrap: wrap;
@@ -133,24 +140,12 @@
 
 }
 
-/* .skill-card{
-  width: 5rem;
-  height: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background-color: #222;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0.15rem 0.15rem;
-  padding-left: 1;
-} */
 
 .skill-card-content{
   width: 4.5rem;
   height: 1.8rem;
   border-radius: 1rem;
-  background-color: #90565671;
+  background-color: #00000071;
   display: flex;
   align-items: center;
   justify-content: center;

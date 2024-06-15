@@ -9,7 +9,7 @@ export function About() {
          
       <Row>
         <Col xs={24} sm={24} md={16} lg={16} xl={16}>
-        <Reveal children={ <div className="text-[#fdfdfd] sm:text-[1rem] md:text-[1rem] lg:text-[2rem] xl:text-3xl font-bold pb-1">ABOUT<span className='text-curtainColor'>.</span></div>} />
+        <Reveal children={ <div className="text-[#fffff] sm:text-[1rem] md:text-[1rem] lg:text-[2rem] xl:text-3xl font-bold pb-1">ABOUT<span className='text-curtainColor'>.</span></div>} />
        <Reveal children={
           <div className="summary">
           I am a software engineer with a passion for building scalable and
@@ -36,7 +36,7 @@ function Skills() {
   ]
   return (
     <div className="skills-container align-center">
-<Reveal children={<div className="text-[#fdfdfd] sm:text-[1rem] md:text-[1rem] lg:text-[2rem] xl:text-3xl font-bold pb-1">SKILLS<span className='text-curtainColor'>.</span></div>} />
+<Reveal children={<div className="text-[#fffff] sm:text-[1rem] md:text-[1rem] lg:text-[2rem] xl:text-3xl font-bold pb-1">SKILLS<span className='text-curtainColor'>.</span></div>} />
 
 
       <Row gutter={16}>

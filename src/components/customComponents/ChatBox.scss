@@ -1,8 +1,8 @@
 .chatbox {
-  width: 90%;
-  max-width: 400px; /* Limiting the max-width for better appearance */
+  width:364px;
+  max-width: 100%; /* Limiting the max-width for better appearance */
   height: 500px; /* Using viewport height for responsiveness */
-  max-height: 300px; /* Limiting max-height for better appearance */
+  max-height: 500px; /* Limiting max-height for better appearance */
   margin: 20px auto; /* Centering the chatbox with some margin */
   padding: 8px;
   overflow-x: hidden;
@@ -13,19 +13,13 @@
   overflow-y: auto; /* Enabling vertical scrolling */
   scroll-behavior: smooth;
   position: relative; /* Ensure the triangle is positioned correctly */
-}
-
-.chatbox::before {
-  content: '';
-  display: block;
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  border-width: 0 10px 10px 10px;
-  border-style: solid;
-  border-color: transparent transparent #f9f9f9 transparent; /* Adding a small triangle at the top */
+  
+  @media (min-width: 400px) {
+    width: 564px;
+    max-width: 564px; /* Limiting the max-width for better appearance */
+    height: 500px; /* Using viewport height for responsiveness */
+    max-height: 500px; /* Limiting max-height for better appearance */
+  }
 }
 
 .chat-message {
@@ -46,7 +40,7 @@
 }
 
 .chat-answer {
-  background-color: #f7a4f994;
+  background-color: #c084fc95;
   margin-right: 10%;
 
 
@@ -57,23 +51,33 @@
 }
 
 .chat-typing {
-  font-style: italic;
-  padding: 10px;
-  border-radius: 5px;
-  height: 20%;
-  background-color: #f7a4f9b1;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  border-radius: 15px;
+  background-color: #c084fc95;
+  margin-bottom: 5px;
+  border: 1px solid #060400;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: blinker 0.7s linear infinite;
 }
 
-@media (max-width: 600px) {
-  .chatbox {
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .chat-question, .chat-answer {
-    font-size: 14px;
+@keyframes blinker {
+  50% {
+    opacity: 0.5;
   }
 }
+
+// @media (max-width: 600px) {
+//   .chatbox {
+//     width: 100%;
+//     max-width: 200px;
+//   }
+
+//   .chat-question, .chat-answer {
+//     font-size: 14px;
+//   }
+// }
 
 @keyframes flicker {
     0% {
