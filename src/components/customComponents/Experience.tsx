@@ -94,7 +94,7 @@ function OneEx ()  {
 <div className="card" key={index}>
   <div className="flex justify-between">
     <div className="flex">
-        <Reveal children={ <h1 className="text-curtainColor font-bold">{data.company} |&nbsp;</h1>} />
+        <Reveal children={ <h1 className="font-bold">{data.company} |&nbsp;</h1>} />
 
       <Reveal children={ <h1 className="text-white font-sans font-bold">&nbsp;{data.role} |</h1>}/>
       <Reveal children={<h1 className="text-white font-sans font-bold ">&nbsp;{data.location} |</h1> }/>

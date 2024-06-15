@@ -72,7 +72,7 @@ module.exports = {
         },
       },
       colors: {
-        curtainColor: '#f9b17a', // Replace with the actual color value from your colors.js file
+        curtainColor: '#290104', // Replace with the actual color value from your colors.js file
       },
     },
   },

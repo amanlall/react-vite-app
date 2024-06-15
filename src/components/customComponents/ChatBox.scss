@@ -1,25 +1,97 @@
 .chatbox {
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-width: 400px;
-    margin: auto;
+  width: 90%;
+  max-width: 400px; /* Limiting the max-width for better appearance */
+  height: 500px; /* Using viewport height for responsiveness */
+  max-height: 300px; /* Limiting max-height for better appearance */
+  margin: 20px auto; /* Centering the chatbox with some margin */
+  padding: 8px;
+  overflow-x: hidden;
+  border-radius: 30px; /* Adding rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  background: #f9f9f97e; /* Light background for better readability */
+  border: 2px solid #0000009d; /* Lighter border color */
+  overflow-y: auto; /* Enabling vertical scrolling */
+  scroll-behavior: smooth;
+  position: relative; /* Ensure the triangle is positioned correctly */
+}
+
+.chatbox::before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #f9f9f9 transparent; /* Adding a small triangle at the top */
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  white-space: pre-wrap; // This ensures the text wraps properly
+}
+
+.chat-question, .chat-answer {
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  border-radius: 15px;
+  background-color: #e0e0e0;
+  margin-bottom: 5px;
+  border: 1px solid #060400;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.chat-answer {
+  background-color: #f7a4f994;
+  margin-right: 10%;
+
+
+}
+.chat-question {
+  background-color: #7f8cee9e;
+  margin-left: 10%;
+}
+
+.chat-typing {
+  font-style: italic;
+  padding: 10px;
+  border-radius: 5px;
+  height: 20%;
+  background-color: #f7a4f9b1;
+}
+
+@media (max-width: 600px) {
+  .chatbox {
+    width: 100%;
+    max-width: 200px;
   }
-  
-  .chat-question {
-    background-color: #e0e0e0;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
+
+  .chat-question, .chat-answer {
+    font-size: 14px;
   }
-  
-  .chat-answer {
-    background-color: #d1ffd6;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .chat-typing {
-    font-style: italic;
-  }
-  
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+span.text-animation-chatgpt .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  margin-left: 3px;
+  background-color: #000000a3;
+  animation: flicker 0.6s infinite;
+}
