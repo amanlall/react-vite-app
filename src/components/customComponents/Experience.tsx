@@ -1,36 +1,52 @@
-
-import { Reveal } from "./Reveal"
-import './ExperienceCard.css'
-import { Typography } from "antd"
-import { useState } from "react";
-export function Experience () {   
-
-    return (
-        <div>
-            <Reveal children={<div className="px-10 mb-10 text-white text-3xl font-bold">EXPERIENCE<span className="text-curtainColor ">.</span></div>}/>
-            <div className="ml-10">
-                <OneEx/>
-            </div>
-        </div>
-        
-    )
+import { Reveal } from './Reveal';
+import './ExperienceCard.css';
+import { Typography } from 'antd';
+import { useState } from 'react';
+// import { brandColours } from '../../utils/cn';
+export function Experience() {
+  return (
+    <div>
+      <Reveal
+        children={
+          <div className="px-10 mb-10 mt-20 text-white text-3xl font-bold">
+            EXPERIENCE<span className="text-curtainColor ">.</span>
+          </div>
+        }
+      />
+      <div className="ml-10">
+        <OneEx />
+      </div>
+    </div>
+  );
 }
 
-function OneEx ()  {
-
-
+function OneEx() {
   const [rows, setRows] = useState(2);
-  console.log(setRows)
-  const [expanded, setExpanded] = useState(false);
-    const workExData = [
-       {
-        company: "Deloitte",
-        role: "Full Stack Developer",
-        FTE:"Full-Time",
-        position: "Senior Analyst",
-        duration: "Feb 2022 - Present",
-        location:"Hyderabad, India",
-        Work: "• Workforce Scheduling System Development: Collaborated as a crucial team member in developing an \
+  console.log(setRows);
+  const [expandedStates, setExpandedStates] = useState<{ [key: number]: boolean }>({});
+
+  const handleExpand = (index: number, expanded: boolean) => {
+    setExpandedStates((prevStates) => {
+      const newStates = { ...prevStates };
+      Object.keys(newStates).forEach((key) => {
+        if (Number(key) !== index) {
+          newStates[Number(key)] = false;
+        }
+      });
+      newStates[index] = expanded;
+      return newStates;
+    });
+  };
+
+  const workExData = [
+    {
+      company: 'Deloitte',
+      role: 'Full Stack Developer',
+      FTE: 'Full-Time',
+      position: 'Senior Analyst',
+      duration: 'Feb 2022 - Present',
+      location: 'Hyderabad, India',
+      Work: "• Workforce Scheduling System Development: Collaborated as a crucial team member in developing an \
         innovative, web-based workforce scheduling application, significantly contributing to the initial design and \
         functionality. \
         • Co-developed a sophisticated calendar solution, comparable to Microsoft Outlook, enabling efficient meeting\
@@ -48,81 +64,95 @@ function OneEx ()  {
         autonomy and satisfaction.\
         • Received consecutive annual Spot Awards in recognition of outstanding performance and contributions to the\
         organization.",
-       },
-       {
-        company: "Wipro-HSBC Bank",
-        role: "Backend Developer",
-        FTE:"Full-Time",
-        position: "Senior Analyst",
-        duration: "Feb 2022 - Present",
-        location:"Bangalore, India",
-        Work: "Worked in Anti Money Laundering team: detecting abnormal transactions.\
-        • Cleared, Secure code Warrior White, Yellow, Orange Belt in Django Vulnerabilities",
-       } ,
-       {
-        company: "Wipro-Holmes",
-        role: "Backend Developer",
-        FTE:"Full-Time",
-        position: "Senior Analyst",
-        duration: "Feb 2022 - Present",
-        location:"Bangalore, India",
-        Work: "Revised, modularized and updated old code bases to modern development standards, thereby improving\
+    },
+    {
+      company: 'Wipro-HSBC Bank',
+      role: 'Backend Developer',
+      FTE: 'Full-Time',
+      position: 'Senior Analyst',
+      duration: 'Feb 2022 - Present',
+      location: 'Bangalore, India',
+      Work: 'Worked in Anti Money Laundering team: detecting abnormal transactions.\
+        • Cleared, Secure code Warrior White, Yellow, Orange Belt in Django Vulnerabilities',
+    },
+    {
+      company: 'Wipro-Holmes',
+      role: 'Backend Developer',
+      FTE: 'Full-Time',
+      position: 'Senior Analyst',
+      duration: 'Feb 2022 - Present',
+      location: 'Bangalore, India',
+      Work: 'Revised, modularized and updated old code bases to modern development standards, thereby improving\
         functionality. Developed and updated REST API based python bot to communicate with other bots and\
         validate, process, update, upload files to Redis database Created Tables and modified data in the table using\
-        PostgreSQL",
-       } ,
+        PostgreSQL',
+    },
 
-       {
-        company: "Capital One (US), Wipro ",
-        role: "Project Engineer",
-        FTE:"Full-Time",
-        position: "Senior Analyst",
-        duration: "Feb 2022 - Present",
-        location:"Bangalore, India",
-        Work: "ETL Developer, Pipeline Migration Created a Data Mart model based on the lineage of Inbound & Outbound files\
+    {
+      company: 'Capital One (US), Wipro ',
+      role: 'Project Engineer',
+      FTE: 'Full-Time',
+      position: 'Senior Analyst',
+      duration: 'Feb 2022 - Present',
+      location: 'Bangalore, India',
+      Work: 'ETL Developer, Pipeline Migration Created a Data Mart model based on the lineage of Inbound & Outbound files\
         using Ab Initio graphs, Snowflake tables which was then loaded into RDS.\
         • Automated the Data extraction process using Python & Shell Scripting. Replacing the Teradata DB with\
         Snowflake DB and Migration of ETL projects from legacy to cloud-based servers. Managed onshore\
-        (Bangalore) & offshore (US) team for Data-Mover Program."
-       }
-    ]
-    return (    
-<>
+        (Bangalore) & offshore (US) team for Data-Mover Program.',
+    },
+  ];
+  return (
+    <>
+      {workExData.map((data, index) => (
+        <div className="card" key={index}>
+          <div className="flex justify-between">
+            <div className="flex">
+              <Reveal
+                // children={<h1 className={`bg-[${brandColours['leftblue']}] font-bold`}>{data.company} |&nbsp;</h1>}
+                children={<h1 className="text-[#5d60c1] text-xs md:text-xs font-bold">{data.company} &nbsp;</h1>}
+              />
 
-{workExData.map((data, index) => (
+              <Reveal
+                children={
+                  <h1 className="text-white font-sans text-xs md:text-xs font-bold">
+                    &nbsp;{data.role} 
+                  </h1>
+                }
+              />
+              <Reveal
+                children={
+                  <h1 className="text-white font-sans text-xs md:text-xs font-bold ">
+                    &nbsp;{data.location} 
+                  </h1>
+                }
+              />
+              <Reveal
+                children={
+                  <h1 className="text-white font-sans text-xs md:text-xs font-bold">
+                    &nbsp;{data.FTE}
+                  </h1>
+                }
+              />
+            </div>
+            <h1 className="text-white font-sans text-xs md:text-xs font-bold">{data.duration}</h1>
+          </div>
+          <h1 className="text-white font-sans text-xs md:text-xs font-bold">{data.position}</h1>
+          {/* <p className="text-white">{data.Work}</p> */}
 
-<div className="card" key={index}>
-  <div className="flex justify-between">
-    <div className="flex">
-        <Reveal children={ <h1 className="font-bold">{data.company} |&nbsp;</h1>} />
-
-      <Reveal children={ <h1 className="text-white font-sans font-bold">&nbsp;{data.role} |</h1>}/>
-      <Reveal children={<h1 className="text-white font-sans font-bold ">&nbsp;{data.location} |</h1> }/>
-      <Reveal children={<h1 className="text-white font-sans font-bold">&nbsp;{data.FTE}</h1> }/>
-    </div>
-    <h1 className="text-white font-sans font-bold">{data.duration}</h1>
-  </div>
-  <h1 className="text-white font-sans font-bold">{data.position}</h1>
-  {/* <p className="text-white">{data.Work}</p> */}
-
-  <Typography.Paragraph
-        ellipsis={{
-          rows,
-          expandable: 'collapsible',
-          expanded,
-          onExpand: (_, info) => setExpanded(info.expanded),
-        }}
-        style={{ color: 'white' }}
-      >
-      {data.Work}
-      </Typography.Paragraph>
-
-</div>
-
-))}
-
-</>
-
-)
+          <Typography.Paragraph
+            ellipsis={{
+              rows,
+              expandable: 'collapsible',
+              expanded: expandedStates[index] || false,
+              onExpand: (_, info) => handleExpand(index, info.expanded),
+            }}
+            style={{ color: 'white',left: '0' }}
+          >
+            {data.Work}
+          </Typography.Paragraph>
+        </div>
+      ))}
+    </>
+  );
 }
-

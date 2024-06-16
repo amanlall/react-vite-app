@@ -1,6 +1,8 @@
-
+* {
+  background-color: #06070d;
+}
   #textblock {
-    background-color: #210002;
+    background-color: #06070d;
     height: 100vh;
   }
   
@@ -11,7 +13,7 @@
   }
   
   #textblock-title {
-    color: #ffaf1b;
+    color: #000000;
     font-size: 35px;
     font-weight: 600;
     font-family: "Helvetica Neue";
@@ -36,6 +38,13 @@
   
   }
   
+  .custom-bg-blend {
+    background-image: url('main-bg.webp');
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+  }
+  
+
   #textblock-devsense {
     text-decoration: none;
     color: #ffaf1b;
@@ -66,7 +75,7 @@
   }
   
   #artback {
-    background-image: url(/background.png);
+    background-image: url(/main-bg1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -105,6 +114,9 @@
     background-image: url(/man_on_mountain.png);
   }
 
+  #scape{
+    background-image: url(/scape.png);
+  }
   #footer {
-    background-color: #98371b;
+    background-color: #210002;
   }

@@ -3,17 +3,21 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { Reveal } from './Reveal';
 import { About } from './About';
 import { Experience } from './Experience';
+import { brandColours } from '../../utils/cn';
 
 export const Hero = () => {
   return (
     <>
       <div className="App">
+
+
         <Parallax
-          pages={2}
+          pages={3}
           style={{ top: '0', left: '0' }}
           className="animation"
         >
-          <ParallaxLayer offset={0} speed={0.5}>
+          
+          {/* <ParallaxLayer offset={0} speed={0.5}>
             <div className="animation_layer parallax" id="artback"></div>
           </ParallaxLayer>
           <ParallaxLayer offset={0} speed={0.8}>
@@ -25,7 +29,7 @@ export const Hero = () => {
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={-0.35}>
-            <div className="animation_layer parallax" id="jungle2"></div>
+            <div className="animation_layer parallax"  id="scape"></div>
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.5}>
             <div className="animation_layer parallax" id="jungle3"></div>
@@ -35,7 +39,7 @@ export const Hero = () => {
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.8}>
             <div className="animation_layer parallax" id="footer"></div>
-          </ParallaxLayer>
+          </ParallaxLayer> */}
           {/* <ParallaxLayer offset={1} speed={0.5}>
             <div className="animation_layer parallax" id="jungle1"></div>
           </ParallaxLayer> */}
@@ -49,8 +53,22 @@ export const Hero = () => {
           {/* <ParallaxLayer offset={1} speed={0.45}>
             <div className="animation_layer parallax" id="artback"></div>
           </ParallaxLayer> */}
+
+          <ParallaxLayer offset={0} speed={0.5}>
+            <div className="animation_layer parallax" id="artback"></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={0} speed={0.8}>
+            <div className="animation_layer parallax" id="manonmountain"></div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={0} speed={0.3}>
+            <div className="animation_layer parallax" id="jungle1"></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={0} speed={0}>
+            <div className="animation_layer parallax_demo" id="scape"></div>
+          </ParallaxLayer>
           <div>
-            <div className="bg-[#98371b]">
+            <div className={`bg-[${brandColours['brown']}]`}>
               <Reveal
                 children={
                   <div className="greeting">
@@ -94,6 +112,11 @@ export const Hero = () => {
             </div>
           </div>
         </Parallax>
+
+        <div id="textblock">
+          <p>Lorem</p>
+        </div>
+
       </div>
     </>
   );

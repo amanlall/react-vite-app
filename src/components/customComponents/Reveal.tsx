@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import {motion, useInView, useAnimation} from "framer-motion";
-
+import {brandColours} from "../../utils/cn";
 interface Props {
     children: JSX.Element;
     width?: "fit-content" | "100%";
@@ -37,14 +37,14 @@ export const Reveal = ({children, width ="fit-content"}:Props)  => {
             }}
             initial="hidden"
             animate={slideControls}
-            transition={{duration: 2.5, ease: "easeInOut"}}
+            transition={{duration: 0.5, ease: "easeInOut"}}
             style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
                 width: "80%",
                 height: "100%",
-                background: "#290104",
+                background: brandColours["reveal"],
                 zIndex:70
             }}
             ></motion.div>

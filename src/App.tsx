@@ -1,17 +1,16 @@
 import { useState } from 'react';
-
 import Header from './components/customComponents/Header';
-import { Hero } from './components/customComponents/Hero';
 import { AiMan } from './components/customComponents/AiMan';
+import Home from './Hero';
 
-import './App.css';
+
 function App() {
-  const [currentTab, setCurrentTab] = useState(true);
+  const [currentTab, setCurrentTab] = useState(false);
 
   return (
     <>
       <Header currentTab={currentTab} setCurrentTab={setCurrentTab} />
-      {currentTab === true ? <Hero /> : <AiMan />}
+      {currentTab === true ? <AiMan /> : <Home />}
 
     </>
   );
