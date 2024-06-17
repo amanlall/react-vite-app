@@ -23,7 +23,7 @@ export default function Home() {
       />
       <main className="w-screen h-screen ">
         <Parallax
-          pages={window.innerWidth < 768 ? 3.5 : 2.5}
+          pages={window.innerWidth < 768 ? 4 : 3}
           style={{ top: '0', left: '0' }}
           className="animation"
         >
@@ -67,9 +67,10 @@ export default function Home() {
             </div>
             <div className="flex md:flex-row flex-col ml-1 mr-6">
               <div className="md:w-1/2">
-              <MySkills/>
-              </div>
               <Experience />
+              </div>
+              <MySkills/>
+       
                
             </div>
          
