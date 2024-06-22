@@ -16,7 +16,7 @@ export function TypewriterEffectSmoothDemo() {
       className: 'text-white dark:text-blue-500',
     },
     {
-      text: 'Chat',
+      text: 'Chat,',
       className: 'text-white dark:text-blue-500',
     },
     {

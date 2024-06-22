@@ -65,13 +65,11 @@ export default function Home() {
                 {/* </div> */}
               </p>
             </div>
-            <div className="flex md:flex-row flex-col ml-1 mr-6">
+            <div className="flex md:flex-row flex-col ml-1 mr-6 space-x-6">
               <div className="md:w-1/2">
               <Experience />
               </div>
               <MySkills/>
-       
-               
             </div>
          
             

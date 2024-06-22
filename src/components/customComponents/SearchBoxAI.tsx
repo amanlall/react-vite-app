@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
 import ChatBox from "./ChatBox";
+import axios from "axios";
 
 export function PlaceholdersAndVanishInputDemo() {
   const [questions, setQuestions] = useState<string[]>([]);
@@ -19,24 +20,34 @@ export function PlaceholdersAndVanishInputDemo() {
     setCurrentQuestion(e.target.value);
   };
 
-  const fetchAnswer = (question: string): Promise<string> => {
-    return new Promise<string>((resolve) => {
-      setTimeout(() => {
-        resolve(question);
-      }, 1);
-    });
+  const fetchResponse = async (question: string) => {
+    const url = 'https://chatwithaiman.azurewebsites.net/chat';
+    const body = { question };
+  
+    try {
+      const response = await axios.post(url, body);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching response:', error);
+      return null;
+    }
   };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (currentQuestion) {
       setQuestions((prevQuestions) => [...prevQuestions, currentQuestion]);
-      const answer = await fetchAnswer(currentQuestion);
-      setAnswers((prevAnswers) => [...prevAnswers, answer]);
+      const response = await fetchResponse(currentQuestion);
+      if (response) {
+        const answer = response.response.llmanswer.content;
+        setAnswers((prevAnswers) => [...prevAnswers, answer]);
+      } else {
+        setAnswers((prevAnswers) => [...prevAnswers, "I am not online, Please give me some time"]);
+      }
       setCurrentQuestion("");
     }
   };
-
+  
   return (
     <div className="top-150 mt-20 w-full flex flex-col justify-center items-center px-4">
       <motion.div

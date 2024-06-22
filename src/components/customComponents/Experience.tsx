@@ -43,7 +43,7 @@ function OneEx() {
       company: 'Deloitte',
       role: 'Full Stack Developer',
       FTE: 'Full-Time',
-      position: 'Senior Analyst',
+      // position: 'Senior Analyst',
       duration: 'Feb 2022 - Present',
       location: 'Hyderabad, India',
       Work: "• Workforce Scheduling System Development: Collaborated as a crucial team member in developing an \
@@ -69,8 +69,8 @@ function OneEx() {
       company: 'Wipro-HSBC Bank',
       role: 'Backend Developer',
       FTE: 'Full-Time',
-      position: 'Senior Analyst',
-      duration: 'Feb 2022 - Present',
+      // position: 'Project Engineer',
+      duration: 'Sep 2021 - Jan 2022',
       location: 'Bangalore, India',
       Work: 'Worked in Anti Money Laundering team: detecting abnormal transactions.\
         • Cleared, Secure code Warrior White, Yellow, Orange Belt in Django Vulnerabilities',
@@ -79,8 +79,8 @@ function OneEx() {
       company: 'Wipro-Holmes',
       role: 'Backend Developer',
       FTE: 'Full-Time',
-      position: 'Senior Analyst',
-      duration: 'Feb 2022 - Present',
+      // position: 'Senior Analyst',
+      duration: 'Mar 2020 - Aug 2021',
       location: 'Bangalore, India',
       Work: 'Revised, modularized and updated old code bases to modern development standards, thereby improving\
         functionality. Developed and updated REST API based python bot to communicate with other bots and\
@@ -92,8 +92,8 @@ function OneEx() {
       company: 'Capital One (US), Wipro ',
       role: 'Project Engineer',
       FTE: 'Full-Time',
-      position: 'Senior Analyst',
-      duration: 'Feb 2022 - Present',
+      // position: 'Senior Analyst',
+      duration: 'Jul 2018 - Dec 2019',
       location: 'Bangalore, India',
       Work: 'ETL Developer, Pipeline Migration Created a Data Mart model based on the lineage of Inbound & Outbound files\
         using Ab Initio graphs, Snowflake tables which was then loaded into RDS.\
@@ -137,7 +137,7 @@ function OneEx() {
             </div>
             <h1 className="text-white font-sans text-xs md:text-xs font-bold">{data.duration}</h1>
           </div>
-          <h1 className="text-white font-sans text-xs md:text-xs font-bold">{data.position}</h1>
+          {/* <h1 className="text-white font-sans text-xs md:text-xs font-bold">{data.position}</h1> */}
           {/* <p className="text-white">{data.Work}</p> */}
 
           <Typography.Paragraph

@@ -85,7 +85,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ questions, answers }) => {
               <Avatar src="https://static.vecteezy.com/system/resources/previews/007/839/759/original/cute-robot-cartoon-icon-illustration-science-technology-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg" />{' '}
              
                 <ChatGPTTypewriterEffect
-                  delay={70}
+                  delay={50}
                   text={chat.answer}
                   hideWhenFinished
                 />
