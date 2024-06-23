@@ -22,14 +22,6 @@ export function Experience() {
   );
 }
 
-interface DataType {
-  key: string;
-  company: string;
-  role: string;
-  location: string;
-  duration: string;
-  work: string;
-}
 
 function OneEx() {
   const [rows, setRows] = useState(2);
