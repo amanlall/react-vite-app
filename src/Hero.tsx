@@ -28,12 +28,12 @@ export default function Home() {
           className="animation"
         >
           <div
-            className="custom-bg-blend flex items-center w-[1800px] h-[300%] bg-repeat  bg-repeat-y "
+            className="custom-bg-blend flex items-center w-[1800px] h-[300%] bg-repeat bg-repeat-y "
             style={{ backgroundImage: 'url(main-bg.webp)' }}
           ></div>
 
           <ParallaxLayer offset={0} speed={0}>
-            <div className="pl-4 md:pl-40 pb-56 mt-20 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
+            <div className="pl-4 md:pl-40 pb-56 mt-20 md:pb-20 flex flex-col mb-40 gap-5 z-[10] max-w-[750px]">
               <Reveal
                 children={
                   <h1 className="text-[50px] text-white font-bold">
@@ -57,23 +57,18 @@ export default function Home() {
                 }
               />
               <p className="text-gray-200 text-[15px] md:block">
-                {/* <div className="summary"> */}
-                  I am a software engineer with a passion for building scalable
-                  and user-friendly software applications. With 6 years of
-                  expertise, skilled in both backend (4 years) and frontend (2
-                  years) development.
+                {/* <div className="summary"> */}I am a software engineer with a
+                passion for building scalable and user-friendly software
+                applications. With 6 years of expertise, skilled in both backend
+                (4 years) and frontend (2 years) development.
                 {/* </div> */}
               </p>
             </div>
-            <div className="flex md:flex-row flex-col ml-1 mr-6 space-x-6">
-              <div className="md:w-1/2">
+          
+          <MySkills />
+            <div className="">
               <Experience />
-              </div>
-              <MySkills/>
             </div>
-         
-            
-
 
           </ParallaxLayer>
 
@@ -90,7 +85,7 @@ export default function Home() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.8}>
-          <div className="absolute bottom-1 right-0 z-[10] md:hidden">
+            <div className="absolute bottom-1 right-0 z-[10] md:hidden">
               <img
                 src="horse.png"
                 alt="horse"
@@ -111,18 +106,6 @@ export default function Home() {
               <img src="cliff.webp" alt="cliff" width={480} height={480} />
             </div>
           </ParallaxLayer>
-
-          {/* <ParallaxLayer offset={0} speed={-1}>
-                    <div className="absolute bottom-0 right-0 z-[10]">
-                    <img
-                  src="stars.png"
-                  alt="stars"
-                  height={300}
-                  width={300}
-                  className="absolute top-0 left-0 z-[10]"
-                />
-                    </div>
-                  </ParallaxLayer> */}
         </Parallax>
       </main>
     </>

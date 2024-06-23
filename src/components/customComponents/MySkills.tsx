@@ -10,22 +10,22 @@ import { Reveal } from "./Reveal";
 const MySkills = () => {
   return (
     <div
-      style={{ backgroundImage: "url(/bg-2.jpg)" }}
-      className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
+
+      className="w-screen flex items-center justify-center bg-cover bg-center"
     >
-      <div className="flex flex-col gap-20 max-w-[80%] text-center items-center">
-        <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col gap-5 max-w-[80%] text-center items-center">
+        <div className="flex flex-col items-center gap-1">
             <Reveal
                 children={
-          <h1 className="px-10 mb-10 mt-10 text-white text-3xl font-bold">
+          <h1 className="px-10 mb-4 text-white text-3xl font-bold">
             SKILLS{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
               {" "}
               &{" "}
             </span>
-            TECHNOLOGIES
+            TECHNOLOGIES<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">.</span>
           </h1>} />
-          <p className="text-gray-400 text-[20px]">
+          <p className="text-gray-400 text-[15px]">
             Using the latest tech this world has to offer
           </p>
         </div>
@@ -33,12 +33,12 @@ const MySkills = () => {
           slidesPerView={5}
           loop={true}
           autoplay={{
-            delay: 0,
+            delay: 10,
             disableOnInteraction: false,
           }}
-          speed={5000}
+          speed={1300}
           modules={[Autoplay]}
-          className="max-w-[90%]"
+          className="max-w-[100%]"
         >
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
@@ -55,11 +55,11 @@ const MySkills = () => {
           slidesPerView={5}
           loop={true}
           autoplay={{
-            delay: 0,
+            delay: 10,
             disableOnInteraction: false,
             reverseDirection: true
           }}
-          speed={8000}
+          speed={1300}
           modules={[Autoplay]}
           className="max-w-[100%]"
         >
