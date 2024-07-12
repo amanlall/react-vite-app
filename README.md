@@ -1,6 +1,10 @@
 Visit https://amanlall.github.io/react-vite-app/
 # React + TypeScript + Vite
 
+git clone <main>
+npm i
+npm run dev #for dev server
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
